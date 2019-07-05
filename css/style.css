@@ -1759,273 +1759,44 @@ section {
 }
 .section-title h2 {
   margin: 0 auto;
-  font-size: 48px;
+  font-size: 40px;
   padding:0 0 20px;
   color: #c4a676;
+}
+.section-titles {
+  position: relative;
+  text-align: center;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+  margin-bottom: 3rem !important;
+  border-top: 1px solid #f1e2ca !important;
+  border-bottom: 1px solid #f1e2ca !important;
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+}
+.section-titles h2 {
+  margin: 0 auto;
+  font-size: 40px;
+  color: #c4a676;
+}
+.section-titles p {
+  text-transform: none;
 }
 @media (max-width: 767px) {
   .section-title h2 {
   font-size: 30px;
   }
 }
-/* .section-title:before {
-    content: "";
-    background: url(../img/section-title-flower.png) center center/auto no-repeat local;
-    width: 172px;
-    height: 68px;
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-} */
-/*section title 2*/
 
-.section-titl-two {
-  position: relative;
-  text-align: center;
-}
-.section-titl-two h2 {
-  margin: 0 auto;
-  font-size: 48px;
-  padding:65px 0;
-}
-.section-titl-two:before {
-    content: "";
-    background: url(../img/section-title-flowe1.png) center center/auto no-repeat local;
-    width: 100px;
-    height: 68px;
-    position: absolute;
-    left: 50%;
-    bottom: 62%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-/*section title 2*/
-
-.section-title-three {
-  position: relative;
-  text-align: center;
-}
-.section-title-three h2 {
-  margin: 0 auto;
-  font-size: 48px;
-  padding:0 0 100px;
-  color: #c4a676;
-}
 @media (max-width: 767px) {
-  .section-title-three h2 {
+  .section-titles h2 {
   font-size: 30px;
   }
 }
-/* .section-title-three:before {
-    content: "";
-    background: url(../img/title-3.png) center center/auto no-repeat local;
-    width: 172px;
-    height: 68px;
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-} */
+
 /*=========== COUPLE SECTION ==========*/
-.couple-section-title {
-  position: relative;
-  text-align: center;
-  bottom: 13px;
-}
-.couple-section-title h2 {
-  font-size: 48px;
-  padding:0 0 10px;
-}
 
-@media (max-width: 1199px) {
-  .couple-section-title h2 {
-    font-size: 24px;
-    padding: 0 0 30px;
-  }
-}
-.couple-section-title p {
-  margin: 0 auto;
-  font-size: 48px;
-  padding:0 0 80px;
-}
-.couple-section .couple-details {
-  padding: 0 56px;
-}
-@media (max-width: 1199px) {
-  .couple-section .couple-details {
-    padding: 0px;
-  }
-}
-@media (max-width: 1720px) {
-  .couple-section .couple-details {
-    padding: 0px;
-  }
-}
-.couple-section .couple p {
-  font-size: 17px;
-  text-align: left;
-  font-family: 'Cormorant Garamond', serif;
-  margin-bottom: 50px;
-}
-@media (max-width: 1199px) {
-.couple-section .couple p {
-  font-size: 14px;
-  margin-bottom: 0;
- }
-}
-.couple-section .couple-title h2 {
-  font-family: Great Vibes;
-  border-top:1px solid #eeeeee;
-  border-bottom:1px solid #eeeeee;
-  font-size: 48px;
-  font-weight: normal;
-  color: #2c2c2c;
-  padding:20px;
-  margin-bottom: 50px;
-}
-@media (max-width: 1199px) {
-  .couple-section .couple-title h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    padding: 15px;
-  }
-  .d-non {
-    display: none;
-  }
-}
-@media (max-width: 1670px) {
-  .couple-section .couple-title h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    padding: 15px;
-  }
-  .d-non {
-    display: none;
-  }
-}
-@media (max-width: 1199px) {
-  .couple-section .couple-title h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    padding: 15px;
-  }
-  .d-non {
-    display: none;
-  }
-}
-.couple-section .couple-title p {
-  font-size: 17px;
-  text-align: right;
-  font-family: 'Cormorant Garamond', serif;
-}
-@media (max-width: 1199px) {
-.couple-section .couple-title p {
-  font-size: 14px;
-  margin-bottom: 0;
- }
-}
-.couple-section-title:before {
-    content: "";
-    background: url(../img//title/couple-title-flower.png) center center/auto no-repeat local;
-    width: 111px;
-    height: 15px;
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-.couple-section {
-  position: relative;
-  padding: 100px 0 0 0;
-  background-color: #fffef7;
-}
-
-.couple-section:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 100px;
-     background-color: #fffef7;
-    -webkit-transform: skewY(6deg);
-    -moz-transform: skewY(6deg);
-    -o-transform: skewY(6deg);
-    -ms-transform: skewY(6deg);
-    transform: skewY(6deg);
-
-}
-
-.couple-section .rect:before {
-    content: "";
-    background-image: url(../img/couple/couple-btm-1-flower.png);
-    background-repeat: no-repeat;
-    background-position: 100% 100%;
-    background-size: cover;
-    width: 430px;
-    height: 521px;
-    position: absolute;
-    left: 0%;
-    top: 0%;
-}
-.couple-section .rect:after {
-    content: "";
-    background-image: url(../img/couple/couple-btm-flower.png);
-    background-repeat: no-repeat;
-    background-position: 100% 100%;
-    background-size: cover;
-    width: 399px;
-    height: 521px;
-    position: absolute;
-    right: 0;
-    bottom: -50%;
-}
-
-@media (max-width: 767px) {
-  .couple-section .rect:before,.couple-section .rect:after {
-    display: none;
-  }
-}
-.hero-style-1:before, .hero-style-2:before {
-    content: "";
-    width: 100%;
-    height: 110%;
-    position: absolute;
-    left: 0;
-    top: -10%;
-    background: -webkit-linear-gradient(top, #5533ff, #2c9fdf 50%);
-    background: -moz-linear-gradient(top, #5533ff, #2c9fdf 50%);
-    background: -o-linear-gradient(top, #5533ff, #2c9fdf 50%);
-    background: -ms-linear-gradient(top, #5533ff, #2c9fdf 50%);
-    background: -webkit-gradient(linear, left top, left bottom, from(#5533ff), color-stop(50%, #2c9fdf));
-    background: linear-gradient(top, #5533ff, #2c9fdf 50%);
-    -webkit-transform: skewY(-2deg);
-    -moz-transform: skewY(-2deg);
-    -o-transform: skewY(-2deg);
-    -ms-transform: skewY(-2deg);
-    transform: skewY(-2deg);
-}
 /*couple-section-2*/
-.couple-section-2 {/*
-  margin-bottom: 120px;
-  position: relative;*/
-}
 #story .container,
 #wedding .container {
   margin-top: 50px;
@@ -2087,7 +1858,7 @@ section {
   }
 }
 @media (max-width: 1700px) {
-  .couple-2 {
+  .story-body{
     margin-bottom: 100px;
   }
   .couple-img-2 {
@@ -2100,86 +1871,24 @@ section {
     margin-bottom: 0px;
   }
 }
-/*couple-img-3*/
-.couple-img-3 .groom, .couple-img-3 .groom-1 {
-  width: 315px;
-  height: 315px;
-  border-radius: 10%;
-  overflow: hidden;
-  border: 10px solid #fff;
-  box-shadow: 0px 8px 48.38px 10.62px rgba(0, 0, 0, 0.09);
-  -webkit-box-shadow: 0px 8px 48.38px 10.62px rgba(0, 0, 0, 0.09);
-}
-.couple-img-3 .groom:before{
-  content: "";
-  position: absolute;
-  left: -5px;
-  top: -23px;
-  width: 207px;
-  height: 212px;
-  background: url(../img/couple/groom-before-1.png) center center/auto no-repeat local;
-}
-.couple-img-3 .groom-1:before {
-  content: "";
-  position: absolute;
-  left: -30px;
-  top: -32px;
-  width: 207px;
-  height: 212px;
-  background: url(../img/couple/groom-before-1.png) center center/auto no-repeat local;
-}
-.couple-img-3 .groom-1 {
-    position: relative;
-    content: "";
-    left: 31%;
-    bottom: 140px;
-}
 .pad-0 {
   padding: 0;
 }
-
-/*couple-img-1*/
-@media (max-width: 1700px) {
-  .couple-img-1:before {
-    left: 14px;
-  }
+#story .section-titles {
+  margin-bottom: 6rem !important;
 }
-@media (max-width: 991px) {
-    .couple-img-1:before {
-      left: 17px;
-  }
+.story-body {
+  margin-top: 1rem;
 }
-.couple-2 h2 {
-  font-family: Great Vibes;
-  font-size: 48px;
-  font-weight: normal;
-}
-.couple-2 p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 17px;
-}
-.couple-2 h4 {
+  .story-body p {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: #c4a676;
-    margin-top: 30px;
-    text-transform: uppercase;
-}
-.couple-2 h4 a {
-  color: #c4a676;
-}
-.couple-2 h4 a img {
-  margin-left: 20px;
-  text-transform: uppercase;
-}
+    font-size: 17px;
+  }
+
 
 /*--------------------------------------------------------------
 #0.7    wedding-info-section
 --------------------------------------------------------------*/
-.wedding-info-section {
-
-}
 .info-img {
   position: relative;
     -webkit-transition: all 0.3s ease 0s;
@@ -2189,15 +1898,7 @@ section {
 .info-img {
   min-height: 400px;
 }
-.info-img:before {
-  position: absolute;
-  content: "";
-  background-color: rgb(255,255,255);
-  opacity: 0.702;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-}
+
 .wedding-info {
   position: absolute;
   content: "";
@@ -4288,10 +3989,7 @@ section {
   margin-bottom: 60px;
 }
 .gift-title h2 {
-  margin: 0 auto;
-  font-size: 48px;
   padding:0 0 20px;
-  color: #c4a676;
 }
 .gift-title p {
   font-size: 17px;
@@ -4418,9 +4116,9 @@ section {
 }
 
 .contact-two .container {
-  background-color: rgba(148, 126, 43, 0.5);
+  background-color: rgba(148, 135, 86, 0.5);
   border-radius: 10px;
-  padding: 15px;
+  padding: 30px;
 }
  .form-control-two {
     border: 1px solid #f8f7f2;
@@ -4429,12 +4127,13 @@ section {
     border-radius: 5px;
     box-shadow: none;
     height: 50px;
-    /* text-transform: capitalize; */
     font-family: 'Cormorant Garamond', serif;
   }
    .form-control-two:hover {
     border: 1px solid #c4a676;
-    /* background: transparent; */
+  }
+  .form-control-two.name {
+    text-transform: capitalize;
   }
   .form-group {
     margin-bottom: 10px;
@@ -4925,6 +4624,9 @@ canvas#world {
 /*--------------------------------------------------------------
 #AA boxing
 --------------------------------------------------------------*/
+/*
+  margin
+*/
 .mt-1 {
   margin-top: 1rem;
 }
@@ -4942,5 +4644,18 @@ canvas#world {
 }
 .mb-3 {
   margin-bottom: 3rem;
+}
+
+/*
+  padding
+*/
+.pb-1 {
+  padding-bottom: 1rem;
+}
+.pb-2 {
+  padding-bottom: 2rem;
+}
+.pb-3 {
+  padding-bottom: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
