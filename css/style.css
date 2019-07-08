@@ -1802,34 +1802,21 @@ section {
   margin-top: 50px;
 }
 .couple-img-2 .groom, .couple-img-2 .groom-1 {
-  width: 315px;
-  height: 315px;
-  border-radius: 50%;
+  width: 400px;
+  /* height: 600px; */
+  /* border-radius: 50%; */
   overflow: hidden;
   border: 10px solid #fff;
   box-shadow: 0px 8px 48.38px 10.62px rgba(0, 0, 0, 0.04);
   -webkit-box-shadow: 0px 8px 48.38px 10.62px rgba(0, 0, 0, 0.04);
+  margin-left: 5rem;
 }
 @media (max-width: 767px) {
   .couple-img-2 .groom, .groom-1{
     border-radius: 0%;
   }
 }
-.couple-img-2 .groom:before {
-  content: "";
-  position: absolute;
-  left: 23px;
-  top: -43px;
-  width: 207px;
-  height: 212px;
-  background: url(../img/couple/groom-before.png) center center/auto no-repeat local;
-}
-@media (max-width: 767px) {
-  .couple-img-2 .groom:before {
-  left: -20px;
-  top: -42px;
-  }
-}
+
 .couple-img-2 .groom-1:before {
   content: "";
   position: absolute;
@@ -1875,7 +1862,7 @@ section {
   padding: 0;
 }
 #story .section-titles {
-  margin-bottom: 6rem !important;
+  margin-bottom: 8rem !important;
 }
 .story-body {
   margin-top: 1rem;
