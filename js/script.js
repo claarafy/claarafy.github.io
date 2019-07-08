@@ -700,7 +700,7 @@
    When Window is resizing, do
    ========================================================================== */
      $(window).on("resize", function() {
-
+        
         toggleClassForSmallNav();
 
         clearTimeout($.data(this, 'resizeTimer'));

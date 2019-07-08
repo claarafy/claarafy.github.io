@@ -1904,7 +1904,10 @@ section {
     color: #867457;
     font-size: 24px;
   }
-
+.info-body {
+  margin-top: 3rem;
+  font-size: 18px;
+}
 .pad-0 {
   padding: 0;
 }
