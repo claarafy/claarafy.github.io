@@ -493,125 +493,33 @@
      /*------------------------------------------
         = GIFT REGISTRATION SLIDER
     -------------------------------------------*/
-    if ($(".gif-registration-slider").length) {
-        $('.gif-registration-slider').owlCarousel({
-            items: 5,
-            dots: false,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            smartSpeed: 1000,
-            loop: true,
-            margin: 60,
-            stagePadding: 10,
-            responsive: {
-                0 : {
-                    items: 3
-                },
-                480 : {
-                    items: 3
-                },
-                768 : {
-                    items: 5
-                },
-                1920 : {
-                    items: 5
-                }
-            }
-        });
-    }
+    // if ($(".gift-slider").length) {
+    //     $('.gift-slider').owlCarousel({
+    //         items: 4,
+    //         dots: false,
+    //         autoplay: true,
+    //         autoplayTimeout: 3000,
+    //         smartSpeed: 1000,
+    //         loop: true,
+    //         margin: 60,
+    //         stagePadding: 10,
+    //         responsive: {
+    //             0 : {
+    //                 items: 3
+    //             },
+    //             480 : {
+    //                 items: 3
+    //             },
+    //             768 : {
+    //                 items: 5
+    //             },
+    //             1920 : {
+    //                 items: 5
+    //             }
+    //         }
+    //     });
+    // }
 
-
-    /*------------------------------------------
-        = WATER RIPPLE
-    -------------------------------------------*/
-    if ($(".ripple").length) {
-        $('.ripple').ripples({
-            resolution: 512,
-            dropRadius: 20, //px
-            perturbance: 0.04,
-        });
-
-        // Automatic drops
-        setInterval(function() {
-            var $el = $('.ripple');
-            var x = Math.random() * $el.outerWidth();
-            var y = Math.random() * $el.outerHeight();
-            var dropRadius = 20;
-            var strength = 0.04 + Math.random() * 0.04;
-
-            $el.ripples('drop', x, y, dropRadius, strength);
-        }, 400);
-    }
-
-    /*------------------------------------------
-        = VIDEO BACKGROUND
-    -------------------------------------------*/
-    if ($("#video-background").length) {
-        $('#video-background').YTPlayer({
-            showControls: false,
-            playerVars: {
-                modestbranding: 0,
-                autoplay: 1,
-                controls: 1,
-                showinfo: 0,
-                wmode: 'transparent',
-                branding: 0,
-                rel: 0,
-                autohide: 0,
-                origin: window.location.origin
-            }
-        });
-    }
-
-    /*------------------------------------------
-        = PARTICLE GROUND
-    -------------------------------------------*/
-    if ($(".particleground").length) {
-        $('.particleground').particleground({
-            dotColor: "#b7b7b7",
-            lineColor: "#c4a676",
-            lineWidth: 0.7,
-            particleRadius: 6
-
-        });
-    }
-
-    // Firefly
-    if( $('.lec_slider_firefly').length > 0 ) {
-        $('.lec_slider_firefly').each(function(){
-            var min = $(this).attr('data-min');
-            var max = $(this).attr('data-max');
-            var total = $(this).attr('data-total');
-            $.firefly({
-                color: 'none',
-                minPixel: min,
-                maxPixel: max,
-                total : total,
-                on: '.lec_slider_firefly'
-            });
-        })
-    }
-
-
-    /* Over */
-    $('.lec_over, .lec_head_bck').each(function(){
-        var color = $(this).attr('data-color');
-        var image = $(this).attr('data-image');
-        var opacity = $(this).attr('data-opacity');
-        var blend = $(this).attr('data-blend');
-        if (color){
-            $(this).css('background-color', color);
-        }
-        if (image){
-            $(this).css('background-image', 'url('+image+')');
-        }
-        if (opacity){
-            $(this).css('opacity', opacity);
-        }
-        if (blend){
-            $(this).css('mix-blend-mode', blend);
-        }
-    });
 
 
 
