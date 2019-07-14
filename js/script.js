@@ -481,6 +481,7 @@
         = COUNTDOWN CLOCK
     -------------------------------------------*/
     if ($("#clock").length) {
+      // $('#clock').countdown('2019/11/17', function(event) {
         $('#clock').countdown('', function(event) {
             var $this = $(this).html(event.strftime('' +
                 '<div class="box"><div>%D</div> <span>Days</span> </div>' +
@@ -700,7 +701,7 @@
    When Window is resizing, do
    ========================================================================== */
      $(window).on("resize", function() {
-        
+
         toggleClassForSmallNav();
 
         clearTimeout($.data(this, 'resizeTimer'));
