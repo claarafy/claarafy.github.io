@@ -10,26 +10,6 @@
     }
 
 
-    // ==================== Gallery Masonry Isotop And Other Gallery and Lightbox
-    function masonryIsotop() {
-        if ($('.isotope-gallery').length) {
-            $('.isotope-gallery').isotope({
-                layoutMode:'masonry'
-            });
-        }
-        if($('.isotope-filter').length){
-            $('.isotope-filter a').children('span').on('click', function(){
-                var Self = $(this);
-                var selector = Self.parent().attr('data-filter');
-                $('.isotope-filter a').children('span').parent().removeClass('active');
-                Self.parent().addClass('active');
-                $('.isotope-gallery').isotope({ filter: selector });
-                return false;
-            });
-        }
-    }
-
-
     // ==================== fact-counter
     $(window).scroll(startCounter);
     function startCounter() {
@@ -47,7 +27,6 @@
                     }
                 });
             });
-
         }
     }
 
@@ -219,42 +198,6 @@
     bgParallax();
 
 
-    // Hero slider background setting
-    function sliderBgSetting() {
-        if ($(".hero-slider .slide").length) {
-            $(".hero-slider .slide").each(function() {
-                var $this = $(this);
-                var img = $this.find(".slider-bg").attr("src");
-
-                $this.css({
-                    backgroundImage: "url("+ img +")",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center center"
-                })
-            });
-        }
-    }
-
-
-    //Setting hero slider
-    function heroSlider() {
-        if ($(".hero-slider").length) {
-            $(".hero-slider").slick({
-                arrows: true,
-                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-                nextArrow: '<button type="button" class="slick-next">Next</button>',
-                dots: true,
-                fade: true,
-                cssEase: 'linear',
-            });
-        }
-    }
-
-    //Active heor slider
-    heroSlider();
-
-
-
     /*------------------------------------------
         = STICKY HEADER
     -------------------------------------------*/
@@ -327,59 +270,14 @@
 
     bgParallax();
 
-
-
-    // Owl-News-carousel
-    if($('.post-slider').length){
-        $('.post-slider').owlCarousel({
-            loop:true,
-            margin:30,
-            dots: false,
-            nav:true,
-            autoplayHoverPause:true,
-            autoplay: true,
-            smartSpeed: 700,
-            navText: [
-              '<i class="lnr lnr-arrow-left"></i>',
-              '<i class="lnr lnr-arrow-right"></i>'
-            ],
-            responsive: {
-                0: {
-                    items: 1,
-                    center: false
-                },
-                480:{
-                    items:1,
-                    center: false
-                },
-                600: {
-                    items: 1,
-                    center: false
-                },
-                768: {
-                    items: 1
-                },
-                992: {
-                    items: 1
-                },
-                1200: {
-                    items: 1
-                }
-            }
-        })
-    }
-
-
     /*------------------------------------------
         = HIDE PRELOADER
     -------------------------------------------*/
     function preloader() {
         if($('.preloader').length) {
             $('.preloader').delay(100).fadeOut(500, function() {
-
                 //active wow
                 wow.init();
-
             });
         }
     }
@@ -395,86 +293,6 @@
         mobile:       true,       // default
         live:         true        // default
     });
-
-
-
-    // Owl-Service-carousel
-    if($('.service-carousel-et-one').length){
-        $('.service-carousel-et-one').owlCarousel({
-            loop:true,
-            margin:10,
-            dots: false,
-            nav:true,
-            autoplayHoverPause:false,
-            autoplay: true,
-            smartSpeed: 700,
-            navText: [
-              '<img src="img/icon/arro-left.png">',
-              '<img src="img/icon/arro-right.png">'
-            ],
-            responsive: {
-                0: {
-                    items: 1,
-                    center: false
-                },
-                480:{
-                    items: 1,
-                    center: false
-                },
-                600: {
-                    items: 1,
-                    center: false
-                },
-                768: {
-                    items: 1,
-                    center: false
-                },
-                992: {
-                    items: 1
-                },
-                1200: {
-                    items: 1
-                }
-            }
-        })
-    }
-
-    // Owl-Service-carousel
-    if($('.service-carousel-et-two').length){
-        $('.service-carousel-et-two').owlCarousel({
-            loop:true,
-            margin:10,
-            dots: false,
-            nav:false,
-            autoplayHoverPause:false,
-            autoplay: true,
-            smartSpeed: 800,
-            responsive: {
-                0: {
-                    items: 1,
-                    center: false
-                },
-                480:{
-                    items: 1,
-                    center: false
-                },
-                600: {
-                    items: 1,
-                    center: false
-                },
-                768: {
-                    items: 1,
-                    center: false
-                },
-                992: {
-                    items: 1
-                },
-                1200: {
-                    items: 1
-                }
-            }
-        })
-    }
 
 
  /*------------------------------------------
@@ -574,56 +392,6 @@
         });
     }
 
-
-
-
-
-
-
-
-
-
-
-    // Owl-News-carousel
-    if($('.blog-img-carousel').length){
-        $('.blog-img-carousel').owlCarousel({
-            loop:true,
-            margin:30,
-            dots: false,
-            nav:true,
-            autoplayHoverPause:true,
-            autoplay: true,
-            smartSpeed: 700,
-            navText: [
-              '<i class="lnr lnr-arrow-left"></i>',
-              '<i class="lnr lnr-arrow-right"></i>'
-            ],
-            responsive: {
-                0: {
-                    items: 1,
-                    center: false
-                },
-                480:{
-                    items:1,
-                    center: false
-                },
-                600: {
-                    items: 1,
-                    center: false
-                },
-                768: {
-                    items: 1
-                },
-                992: {
-                    items: 1
-                },
-                1200: {
-                    items: 1
-                }
-            }
-        })
-    }
-
     // ==================== Scroll To top
     function scrollToToped() {
         $(window).scroll(function(){
@@ -647,12 +415,9 @@
    ========================================================================== */
     $(document).on('ready', function() {
         // add your functions
-        // menuzord_menu();
-        //navbar_scrollfixed();
         scrollToToped();
         wowAnimation();
         onePageNav();
-        // widgetTab();
     });
 
     function onePageNav() {
@@ -669,7 +434,6 @@
         if ($(".site-header").length) {
             stickIt($(".sticky-header"), "sticky-on", $(".site-header .navigation").offset().top);
         }
-
          bgParallax();
     });
 
@@ -680,7 +444,6 @@
     $(window).on('load', function() {
         // add your functions
         preloader_load();
-        masonryIsotop();
         toggleMobileNavigation();
         smallNavFunctionality();
     });
@@ -701,8 +464,6 @@
         }, 200));
 
     });
-
-
 
 
 })(window.jQuery);
