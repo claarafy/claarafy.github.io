@@ -1778,13 +1778,21 @@ section {
   font-family: 'Cormorant Garamond', serif;
   text-transform: uppercase;
 }
+
 .section-titles h2 {
   margin: 0 auto;
   font-size: 40px;
   color: #c4a676;
 }
+
 .section-titles p {
   text-transform: none;
+}
+
+.section-dividers .divider {
+  width: 100%;
+  /* border: 1px solid black; */
+  height: calc(20vh);
 }
 @media (max-width: 767px) {
   .section-title h2 {
@@ -1798,12 +1806,98 @@ section {
   }
 }
 
+/*--------------------------------------------------------------
+#0.2    countdown-section
+--------------------------------------------------------------*/
+
+.countdown-section .border-top-rect {
+    background-color: #ebeae4;
+    height: 100px;
+    width: 1px;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.countdown-col {
+    background: rgba(255,255,255, 0.3);
+    border-radius: 10px;
+    height: calc(80vh);
+    padding: calc(10vh);
+    margin-top: calc(10vh);
+    position: relative;
+}
+.countdown-col:after{
+    content: '';
+    position: absolute;
+}
+.countdown-col-inner {
+  border: 2px dashed #c4a676;
+  height: calc(60vh);
+  padding: calc(10vh);
+  z-index: 1;
+  position: relative;
+}
+
+.countdown-section p {
+    text-align: center;
+    font-size: 24px;
+    font-size: calc( 14px + (24 - 14) * ((100vw - 264px) / (1600 - 300))  );
+    color: #2c2c2c;
+    padding-top: 10px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+.countdown-section .vector-img-option {
+
+}
+.countdown-section .vector-img-option img {
+  width: calc(100vw);
+}
+.countdown-section .countdown-box {
+  transform: translateY(-115vh)
+  /* transform: translateY(  calc(  (5695px - 100vw) ) ) */
+  /* height: calc( (5695px - (5695px - 100vw))) */
+}
+.countdown-section.section-scale {
+  height: calc(115vh);
+}
+.clock-box{
+    width: 100%;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 30px;
+    font-size: calc( 14px + (30 - 14) * ((100vw - 264px) / (1600 - 300))  );
+    height: calc(20vh);
+    position: relative;
+    color: #2c2c2c;
+    font-weight: 600;
+}
+
+.clock-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.countdown-vals {
+  text-align: right;
+}
+
+#dday-text {
+  display: none;
+}
+
+
+
 /*=========== COUPLE SECTION ==========*/
 
 /*couple-section-2*/
 
 #story .container {
-  margin-top: 300px;
+  /* margin-top: 300px; */
 }
 .couple-img-2 {
   transform: translateY(-25%);
@@ -1838,9 +1932,6 @@ section {
 
   }
 }
-.pad-0 {
-  padding: 0;
-}
 
 
 
@@ -1870,262 +1961,6 @@ section {
 }
 .pad-0 {
   padding: 0;
-}
-
-/*--------------------------------------------------------------
-#0.7    count-down-section
---------------------------------------------------------------*/
-
-.count-down-section {
-    position: relative;
-    padding:250px 0 200px;
-}
-.count-down-section-pad-top {
-  padding: 390px 0 245px;
-}
-@media (max-width: 991px) {
-   .count-down-section {
-    padding:310px 0 175px;
-  }
-}
-.count-down-section .border-top-rect {
-    background-color: #ebeae4;
-    height: 100px;
-    left: 50%;
-    position: absolute;
-    top: 100px;
-    width: 1px;
-    z-index: 1;
-}
-
-.countdown-col {
-    background: rgba(255,255,255,0.3);
-    padding: 75px 70px;
-    border-radius: 10px;
-    margin:0 28px;
-}
-@media (max-width: 991px) {
-  .countdown-col {
-    padding: 50px;
-    margin: 0;
-  }
-}
-@media (max-width: 767px) {
-  .countdown-col {
-    padding: 10px;
-    margin: 0;
-  }
-}
-.count-down-section h2 {
-    font-size: 70px;
-    font-family: Great Vibes;
-    color: #c4a676;
-    margin: 0;
-    font-weight: 200;
-    text-align: center;
-  }
-
-.count-down-section p {
-    text-align: center;
-    font-size: 24px;
-    color: #2c2c2c;
-    padding-top: 10px;
-    line-height: 30px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    font-weight: normal;
-}
-@media (max-width: 991px) {
-  .count-down-section p {
-    margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 991px) {
-    .count-down-section h2 {
-        font-size: 62px;
-    }
-}
-
-@media (max-width: 767px) {
-    .count-down-section h2 {
-        font-size: 36px;
-        padding-top: 24px;
-    }
-}
-.count-down-section .count-down-clock {
-    margin-top: 13px;
-}
-
-@media (max-width: 991px) {
-    .count-down-section .count-down-clock {
-        margin-top: 35px;
-    }
-}
-.count-down-section #clock {
-    width: 100%;
-    color: #2c2c2c;
-    overflow: hidden;
-    font-size: 33px;
-    padding: 30px 0 30px 15px;
-    font-family: 'Cormorant Garamond', serif;
-    border-top: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
-    display: inline-block;
-}
-@media (max-width: 991px) {
-  .count-down-section #clock {
-    padding: 0px 16px 0px 17px;
-    border-top: none;
-    border-bottom: none;
-  }
-}
-.count-down-section #clock > div {
-    /* background: #fff; */
-    width: 25%;
-    float: left;
-    display: inline-block;
-    position: relative;
-    padding: 0 5px;
-}
-@media (max-width: 991px){
-  .count-down-section #clock > div {
-    padding: 0 16px 0 30px;
-  }
-}
-@media (max-width: 536px) {
-  .count-down-section #clock > div {
-    padding: 0 5px;
-  }
-}
-.countdown-col .vector-img-option img {
-    content: "";
-    width: 173%;
-    max-width: 173%;
-    /* height: 790px; */
-    position: absolute;
-    left: 50%;
-    top: 78%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: -1;
-}
-@media (max-width: 1199px) {
-  .countdown-col .vector-img-option img {
-      width: 120%;
-  }
-}
-@media (max-width: 991px) {
-  .countdown-col .vector-img-option img {
-      width: 100%;
-      height: 600px;
-      top: 53%;
-  }
-}
-.countdown-col .inner-border {
-    width: calc(90% - 80px);
-    height: calc(100% - 80px);
-    border: 2px dashed #c4a676;
-    position: absolute;
-    border-radius: 0%;
-    left: 80px;
-    top: 40px;
-    opacity: 0.4;
-}
-@media (max-width: 991px) {
-  .countdown-col .inner-border {
-    width: calc(106% - 106px);
-    height: calc(114% - 106px);
-    position: absolute;
-    border-radius: 0%;
-    left: 40px;
-    top: 25px;
-    opacity: 0.4;
- }
-}
-.count-down-section #clock>div+div {
-    position: relative;
-}
-.count-down-section #clock>div:last-child {
-    border-right: none;
-    background-image: none;
-}
-
-@media (max-width: 767px) {
-    .count-down-section #clock>div {
-        width: calc(50% - 5px);
-    }
-}
-@media (max-width: 767px) {
-    .count-down-section #clock>div+div {
-        margin: 5px;
-    }
-    .count-down-section #clock>div+div {
-        margin-bottom: 5px;
-    }
-}
-.count-down-section #clock .box>div {
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 1em;
-    color: #2c2c2c;
-    font-family: 'Cormorant Garamond', serif;
-    display: inline-block;
-}
-
-@media (max-width: 991px) {
-    .count-down-section #clock .box>div ,
-    .count-down-section #clock .box span{
-        font-size: 28px !important;
-    }
-
-}
-
-.count-down-section #clock .box span {
-    text-transform: capitalize;
-    margin-left: -5px;
-}
-
-#clock .box>div:first-child {
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 30px;
-    text-transform: capitalize;
-}
-
-#clock .box>span:last-child {
-    font-size: 32px;
-    padding-top: 30px;
-    text-transform: capitalize;
-}
-@media (max-width: 791px){
-    #clock .box>div:first-child,
-    #clock .box>span:last-child  {
-      font-size: 24px !important;
-  }
-}
-
-@media (max-width: 767px) {
-    .count-down-section #clock {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .count-down-section #clock>div {
-    flex-basis: calc(25% - 15px);
-    margin: 0 7.5px;
-    }
-    #clock .box>div:first-child,
-    #clock .box>span:last-child  {
-      font-size: 15px !important;
-  }
-}
-@media (max-width: 480px) {
-    .count-down-section #clock>div {
-    flex-basis: calc(45% - 15px);
-    margin: 0 7.5px;
-    }
 }
 
 
@@ -2691,6 +2526,9 @@ canvas#world {
 /*
   padding
 */
+.p-0 {
+  padding: 0;
+}
 .pb-1 {
   padding-bottom: 1rem;
 }

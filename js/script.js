@@ -480,49 +480,39 @@
  /*------------------------------------------
         = COUNTDOWN CLOCK
     -------------------------------------------*/
+
+    // var finalDate = '2019/11/17';
+    var finalDate = '';
+
     if ($("#clock").length) {
-      // $('#clock').countdown('2019/11/17', function(event) {
-        $('#clock').countdown('', function(event) {
-            var $this = $(this).html(event.strftime('' +
-                '<div class="box"><div>%D</div> <span>Days</span> </div>' +
-                '<div class="box"><div>%H</div> <span>Hours</span> </div>' +
-                '<div class="box"><div>%M</div> <span>Mins</span> </div>' +
-                '<div class="box"><div>%S</div> <span>Secs</span> </div>'));
-        });
+        $('#clock').countdown(finalDate, startCountdown)
+          .on('finish.countdown', endCountdown)
+
+
+        function startCountdown(event) {
+          $('#clock #days-val').html(event.strftime('<div class="box">%D</div>'));
+          $('#clock #hours-val').html(event.strftime('<div class="box">%H</div>'));
+          $('#clock #mins-val').html(event.strftime('<div class="box">%M</div>'));
+          $('#clock #secs-val').html(event.strftime('<div class="box">%S</div>'));
+        }
+
+        function endCountdown() {
+          // $('#clock').hide()
+          $('#countdown-text').hide();
+          $('#dday-text').show();
+        }
+
     }
 
-     /*------------------------------------------
-        = GIFT REGISTRATION SLIDER
-    -------------------------------------------*/
-    // if ($(".gift-slider").length) {
-    //     $('.gift-slider').owlCarousel({
-    //         items: 4,
-    //         dots: false,
-    //         autoplay: true,
-    //         autoplayTimeout: 3000,
-    //         smartSpeed: 1000,
-    //         loop: true,
-    //         margin: 60,
-    //         stagePadding: 10,
-    //         responsive: {
-    //             0 : {
-    //                 items: 3
-    //             },
-    //             480 : {
-    //                 items: 3
-    //             },
-    //             768 : {
-    //                 items: 5
-    //             },
-    //             1920 : {
-    //                 items: 5
-    //             }
-    //         }
+    // if ($("#clock").length) {
+    //     $('#clock').countdown('2019/11/17', function(event) {
+    //         var $this = $(this).html(event.strftime('' +
+    //             '<div class="box"><div>%D</div> <span>Days</span> </div>' +
+    //             '<div class="box"><div>%H</div> <span>Hours</span> </div>' +
+    //             '<div class="box"><div>%M</div> <span>Mins</span> </div>' +
+    //             '<div class="box"><div>%S</div> <span>Secs</span> </div>'));
     //     });
     // }
-
-
-
 
     /*------------------------------------------
         = RSVP FORM SUBMISSION
