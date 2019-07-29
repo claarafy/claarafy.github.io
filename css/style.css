@@ -1314,6 +1314,10 @@ section {
   padding: 30px;
 }
 
+.rsvp-section .form-group .error{
+  color: white;
+}
+
 .form-control.style2 {
   height: 150px;
 }
@@ -1375,6 +1379,7 @@ transition: all 0.3s ease;
   border-color: #a78c62;
   color: #fff;
 }
+
 
 
 /*--------------------------------------------------------------
