@@ -315,7 +315,6 @@
         }
 
         function endCountdown() {
-          // $('#clock').hide()
           $('#countdown-text').hide();
           $('#dday-text').show();
         }
@@ -359,7 +358,7 @@
             messages: {
                 name: "Please enter your name",
                 email: "Please enter your email",
-                guest: "Select your number of guests",
+                guest: "Please select your number of guests",
                 events: "Please let us know if you're attending"
             },
 
@@ -370,26 +369,36 @@
                     url: "mail.php",
                     data: $(form).serialize(),
                     success: function () {
-                        $( "#loader").hide();
-                        $( "#success").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#success").slideUp( "slow" );
-                        }, 3000);
-                        alert("success")
-                        form.reset();
+                      successHandler(form);
                     },
                     error: function() {
-                        $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
-                        }, 3000);
-                        alert("failed")
+                      errorHandler();
                     }
                 });
                 return false;
             }
+
+
         });
+
+        function successHandler(form) {
+          $( "#loader").hide();
+          $( "#success").slideDown( "slow" );
+          setTimeout(function() {
+          $( "#success").slideUp( "slow" );
+          }, 3000);
+          alert("Your RSVP was successfully sent to Jesse and Megan. Thank you!")
+          form.reset();
+        }
+
+        function errorHandler() {
+          $( "#loader").hide();
+          $( "#error").slideDown( "slow" );
+          setTimeout(function() {
+          $( "#error").slideUp( "slow" );
+          }, 3000);
+          alert("Sorry, there was an error. Please contact Jesse and Megan directly. ")
+        }
     }
 
     // ==================== Scroll To top
