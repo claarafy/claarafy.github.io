@@ -1033,34 +1033,55 @@ section {
 
 --------------------------------------------------------------*/
 
-#story .container {
-  /* margin-top: 300px; */
+
+.story-section {
+  min-height: 500px;
 }
 
-.story-img {
-  transform: translateY(-25%);
-}
-
-.story-img .img-wrapper{
+.story-section .story-img {
   width: 80%;
   margin: 0 auto;
   overflow: hidden;
-  border: 10px solid #fff;
-}
-@media (max-width: 960px) {
-  .story-img {
-    transform: translateY(0);
-    margin-top: calc(5vw);
-  }
+  border: 5px solid #e9ddcb;
 }
 
 .story-section .story-body {
-  margin-top: calc(5vw);
+  margin-top: calc(3vw);
 }
 
 .story-section .story-body .body-wrapper p{
   font-size: 18px;
   font-size: calc( 10px + (18 - 10) * ((100vw - 264px) / (1600 - 300))  );
+}
+
+
+@media (min-width: 992px) {
+
+  .story-section .story-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .story-section  .img-col {
+    position: absolute;
+    display: block;
+  }
+
+
+}
+
+@media (max-width: 992px) {
+  .story-section .col-body {
+    margin-left: 0;
+  }
+
+  .story-section .col-body p {
+    line-height: 1.5;
+  }
+
+  .story-section .story-body {
+    margin-top: calc(1vw);
+  }
 }
 
 
@@ -1099,20 +1120,12 @@ section {
 --------------------------------------------------------------*/
 
 
-
 .gallery-thumb {
   width: 100%;
-}
-.gallery-thumb.thumb-1 {
-  /* height: 500px; */
-
 }
 
 .img-fluid {
   width: 100% !important;
-  /* height: 100%; */
-  /* height: auto; */
-  /* display : block; */
 }
 
 @media (max-width: 992px) {
@@ -1120,15 +1133,18 @@ section {
     margin-bottom: 1.5rem;
   }
 }
+
 @media (min-width: 992px)  {
   .gallery-section .gallery-col-1 .gallery-thumb{
     max-height: 426.094px;
     overflow-y: hidden;
   }
+
   .gallery-section .gallery-col-2 .gallery-col-2-a ,
   .gallery-section .gallery-col-2 .gallery-col-2-b {
     padding-left: 0;
   }
+
   .gallery-section .gallery-col-2 .row.row-2{
     margin-top: 1.5rem;
   }
@@ -1139,10 +1155,12 @@ section {
     max-height: 515px;
     overflow-y: hidden;
   }
+
   .gallery-section .gallery-col-2 .gallery-col-2-a ,
   .gallery-section .gallery-col-2 .gallery-col-2-b {
     padding-left: 0;
   }
+
   .gallery-section .gallery-col-2 .row.row-2{
     margin-top: 1.5rem;
   }
