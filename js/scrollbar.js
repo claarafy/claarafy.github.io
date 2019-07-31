@@ -31,7 +31,7 @@ THE SOFTWARE.
 
 /*
 The code below is fairly long, fully commented and should be normally used in development.
-For production, use either the minified jquery.mCustomScrollbar.min.js script or 
+For production, use either the minified jquery.mCustomScrollbar.min.js script or
 the production-ready jquery.mCustomScrollbar.concat.min.js which contains the plugin
 and dependencies (minified).
 */
@@ -390,7 +390,6 @@ and dependencies (minified).
 			*/
 
 			init:function(options){
-
 				var options=$.extend(true,{},defaults,options),
 					selector=functions._selector.call(this); /* validate selector */
 
