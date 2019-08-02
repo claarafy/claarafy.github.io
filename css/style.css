@@ -1031,12 +1031,12 @@ section {
     text-align: center;
     font-size: 30px;
     font-size: calc( 14px + (30 - 14) * ((100vw - 264px) / (1600 - 300))  );
-    /* color: #d7c5a8; */
     color: #8aadaf;
     color: #a4c9cb;
     color: #b1dee1;
     color: #b69198;
     color: #d5a985;
+    color: #d7c5a8;
     padding-top: 10px;
     line-height: 30px;
     font-weight: bold;
