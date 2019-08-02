@@ -187,7 +187,9 @@ h6 {
 }
 
 .site-header .site-logo a:hover {
-  color: #8aadaf;
+  color: #85a8b9;
+  color: #809496;
+  color: #f1e4cf;
 }
 
 @media (max-width: 991px) {
@@ -344,8 +346,11 @@ h6 {
 .site-header #navbar > ul li a:hover,
 .site-header #navbar > ul li.current-menu-item a {
   text-decoration: none;
-  /* color: #c4a676; */
-  color: #8aadaf;
+  /* color: #8aadaf; */
+  color: #b99e41;
+  color: #DAC77F;
+  color: #d5a985;
+  font-weight: 700;
   font-family: 'Cormorant Garamond', serif;
 }
 
@@ -852,11 +857,14 @@ h6 {
 }
 
 .hero-static-image .hero-circle p {
-  font-size: 30px;
-  color: #c4a676;
+  font-size: 35px;
+  /* color: #b5c195; */
+  /* color: #c4a676; */
+  color: #8aadaf;
+  color: #c8b779;
+  color: #DAC77F;
   font-family: Great Vibes;
   margin: 0 0 30px;
-  color: #8aadaf;
 }
 
 @media (max-width: 991px) {
@@ -978,14 +986,16 @@ section {
 }
 
 .countdown-section  .countdown-col {
-    background: rgba(212, 198, 178, 0.3);
+    /* background: rgba(212, 198, 178, 0.3); */
+    background: rgba(196, 201, 204, 0.3);
     border-radius: 10px;
     width: auto;
     padding: calc(5vw);
 }
 
-.countdown-col  .countdown-col-inner {
-  border: 2px dashed #c4a676;
+.countdown-col .countdown-col-inner {
+  /* border: 2px dashed #c4a676; */
+  border: 2px dashed  #85a8b9;
   padding: calc(5vw);
   width: auto;
 }
@@ -997,12 +1007,16 @@ section {
 
 
 .clock-box-col .clock-box {
-  border-top: 1px solid #c4a676;
-  border-bottom: 1px solid #c4a676;
+  /* border-top: 1px solid #c4a676;
+  border-bottom: 1px solid #c4a676; */
+  border: 1px solid #85a8b9;
+  border-right: 0px;
+  border-left: 0px;
   height: calc(10vw);
   font-size: 26px;
   font-size: calc( 10px + (26 - 10) * ((100vw - 264px) / (1600 - 300))  );
   color: #543709;
+  color: #556f70;
   font-weight: 600;
   margin: 0 auto;
 }
@@ -1017,7 +1031,12 @@ section {
     text-align: center;
     font-size: 30px;
     font-size: calc( 14px + (30 - 14) * ((100vw - 264px) / (1600 - 300))  );
-    color: #d7c5a8;
+    /* color: #d7c5a8; */
+    color: #8aadaf;
+    color: #a4c9cb;
+    color: #b1dee1;
+    color: #b69198;
+    color: #d5a985;
     padding-top: 10px;
     line-height: 30px;
     font-weight: bold;
@@ -1368,7 +1387,9 @@ transition: all 0.3s ease;
 }
 
 .footer-text .text-wrapper:hover h2 {
-  color: #daa955;
+  /* color: #daa955; */
+  color: #8aadaf;
+  color: #d5a985;
   font-size: 31px;
 }
 
@@ -1420,7 +1441,8 @@ transition: all 0.3s ease;
 }
 
 .header-style-2 .sticky-header {
-    background: rgba(196,166,118, 0.8);
+    /* background: rgba(196,166,118, 0.7); */
+    background: rgba(215, 196, 166, 0.7);
     box-shadow: 1px 2px 15px #f1f1f1;
 }
 
