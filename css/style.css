@@ -1012,13 +1012,20 @@ section {
   border: 1px solid #85a8b9;
   border-right: 0px;
   border-left: 0px;
-  height: calc(10vw);
+  height: calc(12vw);
   font-size: 26px;
   font-size: calc( 10px + (26 - 10) * ((100vw - 264px) / (1600 - 300))  );
   color: #543709;
   color: #556f70;
+  color: #e8f0f0;
+  /* color: #eceeee; */
   font-weight: 600;
   margin: 0 auto;
+}
+
+.clock-box-col .clock-box .countdown-vals {
+  font-size: 60px;
+  font-size: calc( 20px + (60 - 20) * ((100vw - 264px) / (1600 - 300))  );
 }
 
 .clock-box .clock-wrapper-col {
@@ -1037,6 +1044,8 @@ section {
     color: #b69198;
     color: #d5a985;
     color: #d7c5a8;
+    /* color: #eceeee; */
+    color: #e8f0f0;
     padding-top: 10px;
     line-height: 30px;
     font-weight: bold;
