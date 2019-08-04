@@ -74,6 +74,7 @@
 		},
 
 		adjustNav: function(self, $parent) {
+			console.log(self, $parent)
 			self.$elem.find('.' + self.config.currentClass).removeClass(self.config.currentClass);
 			$parent.addClass(self.config.currentClass);
 		},
@@ -179,9 +180,16 @@
 			var windowTop = this.$win.scrollTop();
 			var position = this.getSection(windowTop);
 			var $parent;
-
 			//If the position is set
 			if(position !== null) {
+				if(position != 'home')
+				{
+					$('.site-header .navigation').addClass('sticky-on sticky-header')
+				}
+				else {
+					$('.site-header .navigation').removeClass('sticky-on sticky-header')
+
+				}
 				$parent = this.$elem.find('a[href$="#' + position + '"]').parent();
 
 				//If it's not already the current section

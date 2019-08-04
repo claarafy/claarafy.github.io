@@ -344,7 +344,7 @@ h6 {
 }
 
 .site-header #navbar > ul li a:hover,
-.site-header #navbar > ul li.current-menu-item a {
+.site-header #navbar > ul li.current a {
   text-decoration: none;
   /* color: #8aadaf; */
   color: #b99e41;
@@ -504,19 +504,6 @@ h6 {
     position: relative;
   }
 
-  .site-header #navbar > ul .menu-item-has-children > a:before {
-    font-family: "fontawesome";
-    content: "\f107";
-    font-size: 11px;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
 }
 
 @media screen and (min-width: 992px) {
@@ -696,6 +683,8 @@ h6 {
   z-index: 999;
   width: 100%;
 }
+
+
 
 @media screen and (min-width: 992px) {
   .header-style-2 {

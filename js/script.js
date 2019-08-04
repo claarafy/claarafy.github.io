@@ -2,52 +2,95 @@
 
     "use strict";
 
-    // ==================== Preloader
-    function preloader_load() {
-        if($('.preloader').length){
-            $('.preloader').delay(400).fadeOut(500);
-        }
-    }
 
 
-    // ==================== fact-counter
-    $(window).scroll(startCounter);
-    function startCounter() {
-        if ($(window).scrollTop() > 200) {
-            $(window).off("scroll", startCounter);
+    /* ==========================================================================
+       When document is ready, do
+       ========================================================================== */
+        $(document).on('ready', function() {
+            // add your functions
+            scrollToToped();
+            //wowAnimation();
+            onePageNav();
+            toggleClassForSmallNav();
+            smallNavFunctionality();
+        });
 
-            $('.animate-numbers').each(function () {
-                $(this).prop('Counter',0).animate({
-                    Counter: $(this).text()
-                }, {
-                    duration: 5000,
-                    easing: 'swing',
-                    step: function (now) {
-                        $(this).text(Math.ceil(now));
+
+    /* ==========================================================================
+       When document is Scrollig, do
+       ========================================================================== */
+        // window on Scroll function
+        $(window).on('scroll', function() {
+            // add your functions
+            // if ($(".site-header").length) {
+            //     stickIt($(".sticky-header"), "sticky-on", $(".site-header .navigation").offset().top);
+            // }
+             bgParallax();
+        });
+
+    /* ==========================================================================
+       When document is loading, do
+       ========================================================================== */
+
+        $(window).on('load', function() {
+            // add your functions
+            //preloader_load();
+            toggleMobileNavigation();
+            //smallNavFunctionality();
+        });
+
+
+
+    /* ==========================================================================
+       When Window is resizing, do
+       ========================================================================== */
+         $(window).on("resize", function() {
+
+            toggleClassForSmallNav();
+
+            clearTimeout($.data(this, 'resizeTimer'));
+
+            $.data(this, 'resizeTimer', setTimeout(function() {
+                smallNavFunctionality();
+            }, 200));
+
+        });
+        // Parallax background
+        function bgParallax() {
+            if ($(".parallax").length) {
+                $(".parallax").each(function() {
+                    var height = $(this).position().top;
+                    var resize     = height - $(window).scrollTop();
+                    var parallaxSpeed = $(this).data("speed");
+                    var doParallax = -(resize / parallaxSpeed);
+                    var positionValue   = doParallax + "px";
+                    var img = $(this).data("bg-image");
+
+                    $(this).css({
+                        backgroundImage: "url(" + img + ")",
+                        backgroundPosition: "50%" + positionValue,
+                        backgroundSize: "cover"
+                    });
+
+                    if ( window.innerWidth < 768) {
+                        $(this).css({
+                            backgroundPosition: "center center"
+                        });
                     }
                 });
-            });
+            }
         }
-    }
 
-    // ==================== Wow animation
-    function wowAnimation() {
-        var wow = new WOW({
-            mobile: true // trigger animations on mobile devices (default is true)
-        });
-        wow.init();
-    }
-
-     //LighvtBox / Fancybox
-    if($('.lightbox-image').length) {
-      $('.lightbox-image').fancybox();
-    }
-
+        bgParallax();
 
 
    /*------------------------------------------
         = FUNCTIONS
     -------------------------------------------*/
+
+
+
     // Toggle mobile navigation
     function toggleMobileNavigation() {
         var navbar = $(".navigation-holder");
@@ -77,7 +120,7 @@
         })
     }
 
-    toggleMobileNavigation();
+    //toggleMobileNavigation();
 
 
     // Function for toggle a class for small menu
@@ -92,8 +135,7 @@
         }
     }
 
-    toggleClassForSmallNav();
-
+    //toggleClassForSmallNav();
 
     // Function for small menu
     function smallNavFunctionality() {
@@ -119,33 +161,9 @@
         }
     }
 
-    smallNavFunctionality();
+    //smallNavFunctionality();
 
 
-    // function for active menuitem
-    function activeMenuItem($links) {
-        var top = $(window).scrollTop(),
-            windowHeight = $(window).height(),
-            documentHeight = $(document).height(),
-            cur_pos = top + 2,
-            sections = $("section"),
-            nav = $links,
-            nav_height = nav.outerHeight();
-
-
-        sections.each(function() {
-            var top = $(this).offset().top - nav_height,
-                bottom = top + $(this).outerHeight();
-
-            if (cur_pos >= top && cur_pos <= bottom) {
-                nav.find("> ul > li > a").parent().removeClass("current-menu-item");
-                nav.find("a[href='#" + $(this).attr('id') + "']").parent().addClass("current-menu-item");
-            } else if (cur_pos === 2) {
-                nav.find("> ul > li > a").parent().removeClass("current-menu-item");
-            }
-
-        });
-    }
 
 
     // smooth-scrolling
@@ -169,39 +187,17 @@
     }
 
 
-    // Parallax background
-    function bgParallax() {
-        if ($(".parallax").length) {
-            $(".parallax").each(function() {
-                var height = $(this).position().top;
-                var resize     = height - $(window).scrollTop();
-                var parallaxSpeed = $(this).data("speed");
-                var doParallax = -(resize / parallaxSpeed);
-                var positionValue   = doParallax + "px";
-                var img = $(this).data("bg-image");
-
-                $(this).css({
-                    backgroundImage: "url(" + img + ")",
-                    backgroundPosition: "50%" + positionValue,
-                    backgroundSize: "cover"
-                });
-
-                if ( window.innerWidth < 768) {
-                    $(this).css({
-                        backgroundPosition: "center center"
-                    });
-                }
-            });
-        }
-    }
-
-    bgParallax();
 
 
     /*------------------------------------------
         = STICKY HEADER
     -------------------------------------------*/
-
+    function onePageNav() {
+      if($('.site-header .sticky-menu').length){
+        $('.site-header .sticky-menu ul').onePageNav({
+        });
+      }
+    }
     // Function for clone an element for sticky menu
     function cloneNavForSticyMenu($ele, $newElmClass) {
         $ele.addClass('original').clone().insertAfter($ele).addClass($newElmClass).removeClass('original');
@@ -209,17 +205,18 @@
 
     // clone home style 1 navigation for sticky menu
     if ($('.site-header .navigation').length) {
-        cloneNavForSticyMenu($('.site-header .navigation'), "sticky-header");
+        //cloneNavForSticyMenu($('.site-header .navigation'), "sticky-header");
     }
 
     // Function for sticky menu
     function stickIt($stickyClass, $toggleClass) {
-
         if ($(window).scrollTop() >= 800) {
             var orgElement = $(".original");
             var coordsOrgElement = orgElement.offset();
             var leftOrgElement = coordsOrgElement.left;
             var widthOrgElement = orgElement.css("width");
+
+
 
             $stickyClass.addClass($toggleClass);
 
@@ -242,164 +239,7 @@
     }
 
 
-    // Parallax background
-    function bgParallax() {
-        if ($(".parallax").length) {
-            $(".parallax").each(function() {
-                var height = $(this).position().top;
-                var resize     = height - $(window).scrollTop();
-                var parallaxSpeed = $(this).data("speed");
-                var doParallax = -(resize / parallaxSpeed);
-                var positionValue   = doParallax + "px";
-                var img = $(this).data("bg-image");
 
-                $(this).css({
-                    backgroundImage: "url(" + img + ")",
-                    backgroundPosition: "50%" + positionValue,
-                    backgroundSize: "cover"
-                });
-
-                if ( window.innerWidth < 768) {
-                    $(this).css({
-                        backgroundPosition: "center center"
-                    });
-                }
-            });
-        }
-    }
-
-    bgParallax();
-
-    /*------------------------------------------
-        = HIDE PRELOADER
-    -------------------------------------------*/
-    function preloader() {
-        if($('.preloader').length) {
-            $('.preloader').delay(100).fadeOut(500, function() {
-                //active wow
-                wow.init();
-            });
-        }
-    }
-
-
-    /*------------------------------------------
-        = WOW ANIMATION SETTING
-    -------------------------------------------*/
-    var wow = new WOW({
-        boxClass:     'wow',      // default
-        animateClass: 'animated', // default
-        offset:       0,          // default
-        mobile:       true,       // default
-        live:         true        // default
-    });
-
-
- /*------------------------------------------
-        = COUNTDOWN CLOCK
-    -------------------------------------------*/
-
-    var finalDate = '';
-    // var finalDate = '2019/11/17';
-
-    if ($("#clock").length) {
-        $('#clock').countdown(finalDate, startCountdown)
-          .on('finish.countdown', endCountdown)
-
-
-        function startCountdown(event) {
-          $('#clock #days-val').html(event.strftime('<div class="box">%D</div>'));
-          $('#clock #hours-val').html(event.strftime('<div class="box">%H</div>'));
-          $('#clock #mins-val').html(event.strftime('<div class="box">%M</div>'));
-          $('#clock #secs-val').html(event.strftime('<div class="box">%S</div>'));
-        }
-
-        function endCountdown() {
-          $('#countdown-text').hide();
-          $('#dday-text').show();
-        }
-
-    }
-
-    // if ($("#clock").length) {
-    //     $('#clock').countdown('2019/11/17', function(event) {
-    //         var $this = $(this).html(event.strftime('' +
-    //             '<div class="box"><div>%D</div> <span>Days</span> </div>' +
-    //             '<div class="box"><div>%H</div> <span>Hours</span> </div>' +
-    //             '<div class="box"><div>%M</div> <span>Mins</span> </div>' +
-    //             '<div class="box"><div>%S</div> <span>Secs</span> </div>'));
-    //     });
-    // }
-
-    /*------------------------------------------
-        = RSVP FORM SUBMISSION
-    -------------------------------------------*/
-    if ($("#rsvp-form").length) {
-        $("#rsvp-form").validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-                email: {
-                    required: true
-                },
-
-                guest: {
-                    required: true
-                },
-
-                events: {
-                    required: true
-                }
-
-            },
-
-            messages: {
-                name: "Please enter your name",
-                email: "Please enter your email",
-                guest: "Please select your number of guests",
-                events: "Please let us know if you're attending"
-            },
-
-            submitHandler: function (form) {
-                $("#loader").css("display", "inline-block");
-                $.ajax({
-                    type: "POST",
-                    url: "mail.php",
-                    data: $(form).serialize(),
-                    success: function () {
-                      successHandler(form);
-                    },
-                    error: function() {
-                      errorHandler();
-                    }
-                });
-                return false;
-            }
-
-
-        });
-
-        function successHandler(form) {
-          $( "#loader").hide();
-          $( "#success").slideDown( "slow" );
-          setTimeout(function() {
-          $( "#success").slideUp( "slow" );
-          }, 3000);
-          alert("Your RSVP was successfully sent to Jesse and Megan. Thank you!")
-          form.reset();
-        }
-
-        function errorHandler() {
-          $( "#loader").hide();
-          $( "#error").slideDown( "slow" );
-          setTimeout(function() {
-          $( "#error").slideUp( "slow" );
-          }, 3000);
-          alert("Sorry, there was an error. Please contact Jesse and Megan directly. ")
-        }
-    }
 
     // ==================== Scroll To top
     function scrollToToped() {
@@ -418,61 +258,202 @@
         });
     }
 
+    /*------------------------------------------
+           = COUNTDOWN CLOCK
+       -------------------------------------------*/
 
-/* ==========================================================================
-   When document is ready, do
-   ========================================================================== */
-    $(document).on('ready', function() {
-        // add your functions
-        scrollToToped();
-        wowAnimation();
-        onePageNav();
-    });
+       var finalDate = '';
+       // var finalDate = '2019/11/17';
 
-    function onePageNav() {
-  		if($('.site-header .sticky-menu').length){
-  			$('.site-header .sticky-menu ul').onePageNav();
-  		}
-  	}
-/* ==========================================================================
-   When document is Scrollig, do
-   ========================================================================== */
-    // window on Scroll function
-    $(window).on('scroll', function() {
-        // add your functions
-        if ($(".site-header").length) {
-            stickIt($(".sticky-header"), "sticky-on", $(".site-header .navigation").offset().top);
-        }
-         bgParallax();
-    });
-
-/* ==========================================================================
-   When document is loading, do
-   ========================================================================== */
-
-    $(window).on('load', function() {
-        // add your functions
-        preloader_load();
-        toggleMobileNavigation();
-        smallNavFunctionality();
-    });
+       if ($("#clock").length) {
+           $('#clock').countdown(finalDate, startCountdown)
+             .on('finish.countdown', endCountdown)
 
 
+           function startCountdown(event) {
+             $('#clock #days-val').html(event.strftime('<div class="box">%D</div>'));
+             $('#clock #hours-val').html(event.strftime('<div class="box">%H</div>'));
+             $('#clock #mins-val').html(event.strftime('<div class="box">%M</div>'));
+             $('#clock #secs-val').html(event.strftime('<div class="box">%S</div>'));
+           }
 
-/* ==========================================================================
-   When Window is resizing, do
-   ========================================================================== */
-     $(window).on("resize", function() {
+           function endCountdown() {
+             $('#countdown-text').hide();
+             $('#dday-text').show();
+           }
 
-        toggleClassForSmallNav();
+       }
 
-        clearTimeout($.data(this, 'resizeTimer'));
+       /*------------------------------------------
+           = RSVP FORM SUBMISSION
+       -------------------------------------------*/
+       if ($("#rsvp-form").length) {
+           $("#rsvp-form").validate({
+               rules: {
+                   name: {
+                       required: true,
+                       minlength: 2
+                   },
+                   email: {
+                       required: true
+                   },
 
-        $.data(this, 'resizeTimer', setTimeout(function() {
-            smallNavFunctionality();
-        }, 200));
+                   guest: {
+                       required: true
+                   },
 
-    });
+                   events: {
+                       required: true
+                   }
+
+               },
+
+               messages: {
+                   name: "Please enter your name",
+                   email: "Please enter your email",
+                   guest: "Please select your number of guests",
+                   events: "Please let us know if you're attending"
+               },
+
+               submitHandler: function (form) {
+                   $("#loader").css("display", "inline-block");
+                   $.ajax({
+                       type: "POST",
+                       url: "mail.php",
+                       data: $(form).serialize(),
+                       success: function () {
+                         successHandler(form);
+                       },
+                       error: function() {
+                         errorHandler();
+                       }
+                   });
+                   return false;
+               }
+
+
+           });
+
+           function successHandler(form) {
+             $( "#loader").hide();
+             $( "#success").slideDown( "slow" );
+             setTimeout(function() {
+             $( "#success").slideUp( "slow" );
+             }, 3000);
+             alert("Your RSVP was successfully sent to Jesse and Megan. Thank you!")
+             form.reset();
+           }
+
+           function errorHandler() {
+             $( "#loader").hide();
+             $( "#error").slideDown( "slow" );
+             setTimeout(function() {
+             $( "#error").slideUp( "slow" );
+             }, 3000);
+             alert("Sorry, there was an error. Please contact Jesse and Megan directly. ")
+           }
+       }
+
+       // ==================== Preloader
+       // function preloader_load() {
+       //     if($('.preloader').length){
+       //         $('.preloader').delay(400).fadeOut(500);
+       //     }
+       // }
+
+
+
+       // function for active menuitem
+       // function activeMenuItem($links) {
+       //     var top = $(window).scrollTop(),
+       //         windowHeight = $(window).height(),
+       //         documentHeight = $(document).height(),
+       //         cur_pos = top + 2,
+       //         sections = $("section"),
+       //         nav = $links,
+       //         nav_height = nav.outerHeight();
+       //
+       //
+       //     sections.each(function() {
+       //         var top = $(this).offset().top - nav_height,
+       //             bottom = top + $(this).outerHeight();
+       //
+       //         if (cur_pos >= top && cur_pos <= bottom) {
+       //             nav.find("> ul > li > a").parent().removeClass("current-menu-item");
+       //             nav.find("a[href='#" + $(this).attr('id') + "']").parent().addClass("current-menu-item");
+       //         } else if (cur_pos === 2) {
+       //             nav.find("> ul > li > a").parent().removeClass("current-menu-item");
+       //         }
+       //
+       //     });
+       // }
+
+    /*------------------------------------------
+        = HIDE PRELOADER
+    -------------------------------------------*/
+    // function preloader() {
+    //     if($('.preloader').length) {
+    //         $('.preloader').delay(100).fadeOut(500, function() {
+    //             //active wow
+    //             wow.init();
+    //         });
+    //     }
+    // }
+
+
+    /*------------------------------------------
+        = WOW ANIMATION SETTING
+    -------------------------------------------*/
+    // var wow = new WOW({
+    //     boxClass:     'wow',      // default
+    //     animateClass: 'animated', // default
+    //     offset:       0,          // default
+    //     mobile:       true,       // default
+    //     live:         true        // default
+    // });
+
+
+
+
+
+
+
+    // ==================== Wow animation
+    // function wowAnimation() {
+    //     var wow = new WOW({
+    //         mobile: true // trigger animations on mobile devices (default is true)
+    //     });
+    //     wow.init();
+    // }
+
+     //LighvtBox / Fancybox
+    // if($('.lightbox-image').length) {
+    //   $('.lightbox-image').fancybox();
+    // }
+
+
+
+
+    // ==================== fact-counter
+    // $(window).scroll(startCounter);
+    // function startCounter() {
+    //     if ($(window).scrollTop() > 200) {
+    //         $(window).off("scroll", startCounter);
+    //
+    //         $('.animate-numbers').each(function () {
+    //             $(this).prop('Counter',0).animate({
+    //                 Counter: $(this).text()
+    //             }, {
+    //                 duration: 5000,
+    //                 easing: 'swing',
+    //                 step: function (now) {
+    //                     $(this).text(Math.ceil(now));
+    //                 }
+    //             });
+    //         });
+    //     }
+    // }
+
 
 
 })(window.jQuery);
