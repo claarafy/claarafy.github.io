@@ -263,7 +263,7 @@
        -------------------------------------------*/
 
        var finalDate = '';
-       // var finalDate = '2019/11/17';
+       var finalDate = '2019/11/17';
 
        if ($("#clock").length) {
            $('#clock').countdown(finalDate, startCountdown)
