@@ -48,7 +48,6 @@
          $(window).on("resize", function() {
 
             toggleClassForSmallNav();
-
             clearTimeout($.data(this, 'resizeTimer'));
 
             $.data(this, 'resizeTimer', setTimeout(function() {
@@ -73,11 +72,14 @@
                         backgroundSize: "cover"
                     });
 
+
+
                     if ( window.innerWidth < 768) {
                         $(this).css({
                             backgroundPosition: "center center"
                         });
                     }
+
                 });
             }
         }
@@ -152,7 +154,7 @@
             menuItemWidthSubMenu.on("click", function(e) {
                 var $this = $(this);
                 $this.siblings().slideToggle();
-                 e.preventDefault();
+                e.preventDefault();
                 e.stopImmediatePropagation();
             })
         } else if (windowWidth > 991) {
