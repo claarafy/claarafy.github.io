@@ -984,6 +984,7 @@ section {
   border: 2px dashed  #85a8b9;
   padding: calc(5vw);
   width: auto;
+  border-width: calc( 1px + (2 - 1) * ((100vw - 264px) / (1600 - 300))  );
 }
 
 .countdown-col-inner .clock-box-col{
