@@ -1,6 +1,7 @@
 <?php
 
 	$to = "messeinlove@gmail.com"; // this is your Email address
+
 	$from  = "contact@messeinlove.com";
 
 	$sender_name = $_POST['name'];
