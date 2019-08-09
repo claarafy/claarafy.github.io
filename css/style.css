@@ -556,8 +556,9 @@ h6 {
   .site-header #navbar {
     background: #fff;
     display: block !important;
-    width: 280px;
-    width: calc(20vw);
+    /* width: 280px; */
+    min-width: 12rem;
+    width: calc(20vh);
     height: 100% !important;
     margin: 0;
     padding: 0;
