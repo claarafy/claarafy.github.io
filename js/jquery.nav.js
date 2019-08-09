@@ -179,16 +179,28 @@
 			var windowTop = this.$win.scrollTop();
 			var position = this.getSection(windowTop);
 			var $parent;
+			var docWidth = this.$doc.width();
+			var offsetPosition = this.sections['countdown'];
+
 			//If the position is set
 			if(position !== null) {
-				if(position != 'home')
+				//TODO: fx to detect right position for sticky header
+				if((position != 'home'  && docWidth >= 992)|| docWidth < 992)
 				{
 					$('.site-header .navigation').addClass('sticky-on sticky-header')
 				}
-				else {
+				else if((position == 'home'  && docWidth >= 992 ))
+				{
 					$('.site-header .navigation').removeClass('sticky-on sticky-header')
 
+					// $('.site-header .navigation.sticky-on.sticky-header').addClass('hide-animate')
+					// setTimeout(function() {
+					// 	$('.site-header .navigation').removeClass('sticky-on sticky-header hide-animate')
+					//
+					// }, 500)
 				}
+
+
 				$parent = this.$elem.find('a[href$="#' + position + '"]').parent();
 
 				//If it's not already the current section
