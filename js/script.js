@@ -64,10 +64,10 @@
                     var parallaxSpeed = $(this).data("speed");
                     var doParallax = -(resize / parallaxSpeed);
                     var positionValue   = doParallax + "px";
-                    var img = $(this).data("bg-image");
+                    //var img = $(this).data("bg-image");
 
                     $(this).css({
-                        backgroundImage: "url(" + img + ")",
+                        //backgroundImage: "url(" + img + ")",
                         backgroundPosition: "50%" + positionValue,
                         backgroundSize: "cover"
                     });
