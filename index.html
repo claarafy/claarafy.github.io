@@ -14,17 +14,32 @@
 		<!-- favicon -->
 		<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/jquery-ui.min.css">
-		<link rel="stylesheet" href="css/font-awesome/all.min.css">
+		<!-- style sheets -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+					integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+					crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+
 		<link rel="stylesheet" href="css/style.css">
+
+		<!-- js scripts -->
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  					integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  					crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+					  integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+					  crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+						integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+						crossorigin="anonymous"></script>
 
 	</head>
 	<!-- end head-->
 
 	<body id="home">
 		<!-- start page-wrapper -->
-	    <div class="wrapper">
+  	<div class="wrapper">
 
 		    <!-- Start header -->
 		    <header class="site-header header-style-2">
@@ -72,12 +87,11 @@
 		                </div><!-- end of nav-collapse -->
 		            </div><!-- end of container -->
 		        </nav>
-
 		    </header>
 		    <!-- end of header -->
 
-			<!-- start of hero -->
-		    <section class="hero-static-image parallax home" data-bg-image="img/resized/bg_01_lg.jpg" data-speed="3" id="home">
+			  <!-- start of home -->
+		    <section class="hero-static-image parallax home" data-bg-image="img/main/bg_01_lg.jpg" data-speed="3" id="home">
 		        <div class="hero-circle wow zoomIn" data-wow-duration="0.8s">
 		            <div class="circle-inner">
 		                <div class="text">
@@ -120,113 +134,105 @@
 				<!-- start of countdown-section -->
 				<section class="countdown-section" id="countdown">
 						<div class="container-fluid">
-								<div class="row">
-									<div class="col-xs-12 p-0 countdown-container">
-
-										<div class="row">
+							<div class="row">
+								<div class="col-xs-12 p-0 countdown-container">
+									<div class="row">
 											<div class="col-xs-10 col-xs-offset-1 pr-0 text-container">
-													<!-- <div class="border-top-rect"></div> -->
-													<div class="countdown-col">
-
-														<div class="row">
-															<div class="col-xs-12">
-																<div class="countdown-col-inner">
-
-																	<div class="row">
-																		<div class="col-xs-10 col-xs-offset-1 clock-box-col">
-																				<div class="clock-box">
-
-																						<div class="row">
-																							<div class="col-xs-10 col-xs-offset-1 clock-wrapper-col">
-
-																									<div class="row">
-
-																										<div id="clock">
-																											<div class="col-xs-3">
-																												<div class="row">
-																													<div class="col-xs-12 text-center px-0">
-																														<div class="countdown-vals" id="days-val">
-																														</div>
-																													</div>
-																													<div class="col-xs-12 text-center px-0">
-																														days
-																													</div>
-																												</div>
-																											</div>
-
-																											<div class="col-xs-3">
-																												<div class="row">
-																													<div class="col-xs-12 text-center px-0">
-																														<div class="countdown-vals" id="hours-val">
-																														</div>
-																													</div>
-																													<div class="col-xs-12 text-center px-0">
-																														hours
-																													</div>
-																												</div>
-																											</div>
-
-																											<div class="col-xs-3">
-																												<div class="row">
-																													<div class="col-xs-12 text-center px-0">
-																														<div class="countdown-vals" id="mins-val">
-																														</div>
-																													</div>
-																													<div class="col-xs-12 text-center px-0">
-																														mins
-																													</div>
-																												</div>
-																											</div>
-
-																											<div class="col-xs-3">
-																												<div class="row">
-																													<div class="col-xs-12 text-center px-0">
-																														<div class="countdown-vals" id="secs-val">
-																														</div>
-																													</div>
-																													<div class="col-xs-12 text-center px-0">
-																														secs
-																													</div>
-																												</div>
-																											</div>
-
-																										</div>  <!-- end of #clock -->
+												<div class="countdown-col">
+													<div class="row">
+														<div class="col-xs-12">
+															<div class="countdown-col-inner">
+																<div class="row">
+																	<div class="col-xs-10 col-xs-offset-1 clock-box-col">
+																		<div class="clock-box">
+																			<div class="row">
+																				<div class="col-xs-10 col-xs-offset-1 clock-wrapper-col">
+																					<div class="row">
+																						<div id="clock">
+																							<div class="col-xs-3">
+																								<div class="row">
+																									<div class="col-xs-12 text-center px-0">
+																										<div class="countdown-vals" id="days-val">
+																										</div>
+																									</div>
+																									<div class="col-xs-12 text-center px-0">
+																										days
+																									</div>
 																								</div>
-																						</div> <!-- end of .clock-wrapper-col -->
+																								</div>
+
+																								<div class="col-xs-3">
+																									<div class="row">
+																										<div class="col-xs-12 text-center px-0">
+																											<div class="countdown-vals" id="hours-val">
+																											</div>
+																										</div>
+																										<div class="col-xs-12 text-center px-0">
+																											hours
+																										</div>
+																									</div>
+																								</div>
+
+																								<div class="col-xs-3">
+																									<div class="row">
+																										<div class="col-xs-12 text-center px-0">
+																											<div class="countdown-vals" id="mins-val">
+																											</div>
+																										</div>
+																										<div class="col-xs-12 text-center px-0">
+																											mins
+																										</div>
+																									</div>
+																								</div>
+
+																								<div class="col-xs-3">
+																									<div class="row">
+																										<div class="col-xs-12 text-center px-0">
+																											<div class="countdown-vals" id="secs-val">
+																											</div>
+																										</div>
+																										<div class="col-xs-12 text-center px-0">
+																											secs
+																										</div>
+																									</div>
+																								</div>
+
+																						</div>  <!-- end of #clock -->
 																					</div>
-																				</div> <!-- end of .clock-box -->
-																		</div>
-																	</div>
-
-																	<div class="row">
-																			<div class="col-xs-12 mt-3">
-																				<div id="countdown-text">
-																					<p>until we get married!</p>
-																				</div>
-																				<div id="dday-text">
-																					<p>
-																						We are getting married today !
-																					</p>
-																				</div>
+																				</div> <!-- end of .clock-wrapper-col -->
 																			</div>
+																		</div> <!-- end of .clock-box -->
 																	</div>
-																</div> <!-- end of .countdown-col-inner -->
-															</div>
+																</div>
+
+																<div class="row">
+																		<div class="col-xs-12 mt-3">
+																			<div id="countdown-text">
+																				<p>until we get married!</p>
+																			</div>
+																			<div id="dday-text">
+																				<p>
+																					We are getting married today !
+																				</p>
+																			</div>
+																		</div>
+																</div>
+															</div> <!-- end of .countdown-col-inner -->
 														</div>
-													</div> <!-- end of .countdown-col -->
+													</div>
+												</div> <!-- end of .countdown-col -->
 											</div> <!-- end of .text-container-->
-										</div>
-
-										<div class="image-container">
-											<div class="vector-img-option">
-												<img src="img/resized/h_16_lg.jpg" alt="">
-											</div>
-										</div>
-
 									</div>
+									<!-- start of image-cotainer -->
+									<div class="image-container">
+										<div class="vector-img-option">
+											<img src="img/main-comp/h_16_lg.jpg" alt="">
+										</div>
+									</div>	<!-- end of image-cotainer -->
+
 								</div>
 							</div>
-						<!-- end container -->
+						</div> <!-- end container -->
 				</section>
 				<!-- end of countdown section -->
 
@@ -258,7 +264,7 @@
 									<div class="col-xs-6 img-col">
 										<div class="story-img">
 											<div class="img-wrapper">
-												<img class="img-fluid" src="img/resized/v_03_cr.jpg" alt="">
+												<img class="img-fluid" src="img/main-comp/v_03_cr.jpg" alt="">
 											</div>
 										</div>
 									</div>
@@ -341,7 +347,6 @@
 			<!-- start of gallery section -->
 			<section class="gallery-section" id="gallery">
 				<div class="container">
-
 	    		<div class="row">
 	    			<div class="col-md-12">
 	    				<div class="section-titles">
@@ -355,7 +360,7 @@
 						<!-- vertical image -->
 						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 gallery-col gallery-col-1">
 								<div class="gallery-thumb">
-									<img class="img-fluid img-responsive" src="img/resized/v_01_md.jpg" alt="">
+									<img class="img-fluid img-responsive" src="img/main-comp/v_01_md.jpg" alt="">
 								</div>
 						</div>
 						<!-- / end of vertical image -->
@@ -364,28 +369,28 @@
 						<div class="col-xs-12 col-sm-12 col-md-8 gallery-col-2">
 							<div class="row row-1">
 								<div class="col-xs-12 col-sm-12 col-md-6 gallery-col gallery-col-2-a">
-										<div class="gallery-thumb">
-											<img class="img-fluid img-responsive" src="img/resized/h_06_md.jpg" alt="">
-										</div>
+									<div class="gallery-thumb">
+										<img class="img-fluid img-responsive" src="img/main-comp/h_06_md.jpg" alt="">
+									</div>
 								</div>
 								<div class="col-xs-12 col-sm-12 col-md-6 gallery-col gallery-col-2-b">
-										<div class="gallery-thumb">
-											<img class="img-fluid img-responsive" src="img/resized/h_12_md.jpg" alt="">
-										</div>
+									<div class="gallery-thumb">
+										<img class="img-fluid img-responsive" src="img/main-comp/h_12_md.jpg" alt="">
+									</div>
 								</div>
 							</div>
 
 							<div class="row row-2">
 								<div class="col-xs-12 col-sm-12 col-md-6 gallery-col gallery-col-2-a">
-										<div class="gallery-thumb">
-											<img class="img-fluid img-responsive" src="img/resized/h_15_md.jpg" alt="">
-										</div>
+									<div class="gallery-thumb">
+										<img class="img-fluid img-responsive" src="img/main-comp/h_15_md.jpg" alt="">
+									</div>
 								</div>
 
 								<div class="col-xs-12 col-sm-12 col-md-6 gallery-col gallery-col-2-b">
-										<div class="gallery-thumb">
-											<img class="img-fluid img-responsive" src="img/resized/h_01_md.jpg" alt="">
-										</div>
+									<div class="gallery-thumb">
+										<img class="img-fluid img-responsive" src="img/main-comp/h_01_md.jpg" alt="">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -413,32 +418,32 @@
 
 			<!-- start of gift section -->
 		    <section class="gift-section" id="gift">
-		        <div class="container">
-		            <div class="row">
-				    			<div class="col-md-6 col-sm-6 col-xs-12">
-				    				<div class="gift-title section-titles">
-				    					<h2>Gift Registry</h2>
-				    					<p>Please know that your presence at our wedding is present enough!  <br> However, for friends and family who have expressed an interest, we have created a gift registry for your convenience here.</p>
-				    				</div>
-				    			</div>
-									<div class="gift-icons">
-										<div class="col-md-3 col-sm-3 col-xs-6">
-											<div class="icon-wrapper wrapper-1">
-												<a href="https://www.crateandbarrel.com/gift-registry/megan-hong-and-jesse-sheppard/r6011125/" target="_blank">
-													<img src="img/gift/logo_cb.png" alt class="img">
-												</a>
-											</div>
-										</div>
-										<div class="col-md-3 col-sm-3 col-xs-6">
-											<div class="icon-wrapper wrapper-2">
-												<a href="https://www.amazon.com/wedding/megan-hong-jesse-sheppard-topanga-canyon-november-2019/registry/27SZGFRF0PCDV/" target="_blank">
-													<img src="img/gift/logo_am.png" alt class="img img-2">
-												</a>
-											</div>
-										</div>
-									</div>
+	        <div class="container">
+            <div class="row">
+		    			<div class="col-md-6 col-sm-6 col-xs-12">
+		    				<div class="gift-title section-titles">
+		    					<h2>Gift Registry</h2>
+		    					<p>Please know that your presence at our wedding is present enough!  <br> However, for friends and family who have expressed an interest, we have created a gift registry for your convenience here.</p>
 		    				</div>
-		        </div> <!-- end container -->
+		    			</div>
+							<div class="gift-icons">
+								<div class="col-md-3 col-sm-3 col-xs-6">
+									<div class="icon-wrapper wrapper-1">
+										<a href="https://www.crateandbarrel.com/gift-registry/megan-hong-and-jesse-sheppard/r6011125/" target="_blank">
+											<img src="img/logos/logo_cb.png" alt class="img">
+										</a>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-3 col-xs-6">
+									<div class="icon-wrapper wrapper-2">
+										<a href="https://www.amazon.com/wedding/megan-hong-jesse-sheppard-topanga-canyon-november-2019/registry/27SZGFRF0PCDV/" target="_blank">
+											<img src="img/logos/logo_am.png" alt class="img img-2">
+										</a>
+									</div>
+								</div>
+							</div>
+    				</div>
+	        </div> <!-- end container -->
 		    </section>
 		    <!-- end of gift section -->
 
@@ -466,62 +471,62 @@
 								<form id="rsvp-form" class="contact-validation-active">
                     <div class="messages"></div>
                     <div class="row mb-1">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <input id="name" name="name" class="form-control form-control-two name"
-																placeholder="Your name *"
-																required="required" data-error="Name is required."
-																type="text">
-                                <div class="help-block with-errors"></div>
-                            </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input id="name" name="name" class="form-control form-control-two name"
+													placeholder="Your name *"
+													required="required" data-error="Name is required."
+													type="text">
+                          <div class="help-block with-errors"></div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <input id="email" name="email" class="form-control form-control-two required email"
-																			 placeholder="E-mail Address *"
-																			 required="required" data-error="Email is required." type="email">
-                                <div class="help-block with-errors"></div>
-                            </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input id="email" name="email" class="form-control form-control-two required email"
+																 placeholder="E-mail Address *"
+																 required="required" data-error="Email is required." type="email">
+                          <div class="help-block with-errors"></div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-																<select class="form-control form-control-one required" name="guest" id="guest" required="required">
-																	<option selected disabled>- Number of Guests -</option>
-																	<option value="1">1</option>
-																	<option value="2">2</option>
-																	<option value="3">3</option>
-																	<option value="4">4</option>
-																	<option value="5">5</option>
-																	<option value="6">6</option>
-																</select>
-																<div class="help-block with-errors"></div>
-                            </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+													<select class="form-control form-control-one required" name="guest" id="guest" required="required">
+														<option selected disabled>- Number of Guests -</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+													</select>
+													<div class="help-block with-errors"></div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-																<select class="form-control form-control-one required" name="events" id="events">
-																		<option selected disabled>- Are you attending? -</option>
-																		<option value="Yes">I'm attending.</option>
-																		<option value="No">I'm not attending.</option>
-																</select>
-																<div class="help-block with-errors"></div>
-                            </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+													<select class="form-control form-control-one required" name="events" id="events">
+														<option selected disabled>- Are you attending? -</option>
+														<option value="Yes">I'm attending.</option>
+														<option value="No">I'm not attending.</option>
+													</select>
+													<div class="help-block with-errors"></div>
                         </div>
+                      </div>
 												<div class="col-md-12">
 													<div class="form-group">
-															<textarea id="message" name="message" class="form-control form-control-two"
-															rows="4" placeholder="Your Message"></textarea>
+														<textarea id="message" name="message" class="form-control form-control-two"
+														rows="4" placeholder="Your Message"></textarea>
 													</div>
 												</div>
                     </div>
 										<div class="row">
 											<div class="col-md-12">
 												<div class="form-group">
-														<input id="form_botcheck" name="form_botcheck" class="form-control form-control-two" value="" type="hidden">
-														<button type="submit" class="btn btn-lg contact-btn" data-loading-text="Getting Few Sec...">Submit</button>
-														<div id="loader">
-																<i class="ti-reload"></i>
-														</div>
+													<input id="form_botcheck" name="form_botcheck" class="form-control form-control-two" value="" type="hidden">
+													<button type="submit" class="btn btn-lg contact-btn" data-loading-text="Getting Few Sec...">Submit</button>
+													<div id="loader">
+															<i class="ti-reload"></i>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -541,7 +546,7 @@
 		    				<div class="footer-col">
 		    					<div class="footer-col-img">
 										<div class="img-wrapper">
-											<img src="img/resized/g_01_xs.png" alt="">
+											<img src="img/logos/logo_gatsby-c.png" alt="">
 										</div>
 		    					</div>
 									<div class="footer-text">
@@ -554,20 +559,18 @@
 		    				</div>
 		    			</div>
 							<div class="scrollToTop">
-									<i class="fas fa-chevron-up"></i>
+								<i class="fas fa-chevron-up"></i>
 							</div>
 		    		</div>
 		    	</div>
+				</div>
 		    </footer>
 		    <!-- end of footer -->
 		</div>
 		<!-- Wrapper End -->
 
-		<!-- All JavaScript files -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery-ui.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
 
+		<!-- All JavaScript files -->
 		<script src="js/countdown.js"></script>
 		<script src="js/jquery-plugin-collection.min.js"></script>
 		<script src="js/jquery.nav.js"></script>
