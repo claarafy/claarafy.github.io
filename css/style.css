@@ -728,9 +728,9 @@ h6 {
   height: 100vh;
   min-height: 850px;
   position: relative;
-  /* background-image: url("../img/main/bg_01.jpg");
+  background-image: url("../img/resized/bg_01_lg.jpg");
   background-size: cover;
-  background-position: center center; */
+  background-position: center center;
 }
 
 .hero-static-image:before {
@@ -1269,8 +1269,7 @@ section {
 --------------------------------------------------------------*/
 
 .rsvp-section {
-  padding: 235px 0 100px;
-  background: url(../img/main/s_01.png) center center/auto no-repeat local;
+  background: url(../img/resized/h_03_cr.jpg) center;
   height: 1000px;
 }
 
@@ -1278,6 +1277,13 @@ section {
   background-color: rgba(148, 135, 86, 0.5);
   border-radius: 10px;
   padding: 30px;
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 0px;
+  left: 0px;
+  margin: 0 auto;
+  transform: translateY(-50%);
 }
 
 .rsvp-section .form-group .error{
