@@ -1103,7 +1103,7 @@ textarea.form-control {
 background-color: #c4a676;
 border-color: #c4a676;
 color: #fff;
-padding: 5px 55px;
+/* padding: 5px 55px; */
 border-radius: 3px;
 font-size: 20px;
 -webkit-transition: all 0.3s ease;
