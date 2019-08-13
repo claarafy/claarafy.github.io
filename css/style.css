@@ -557,7 +557,8 @@ h6 {
 }
 
 .hero-static-image .circle-inner {
-  width: 650px;
+  /* width: 650px; */
+  width: 90%;
   height: 568px;
   display: table;
   position: absolute;
@@ -579,7 +580,7 @@ h6 {
 
 @media (max-width: 991px) {
   .hero-static-image .hero-circle .circle-inner {
-    width: 550px;
+    /* width: 550px; */
     height: 481px;
     top: 50%;
   }
@@ -587,14 +588,14 @@ h6 {
 
 @media (max-width: 767px) {
   .hero-static-image .hero-circle .circle-inner {
-    width: 450px;
+    /* width: 450px; */
     height: 392px;
   }
 }
 
 @media (max-width: 450px) {
   .hero-static-image .hero-circle .circle-inner {
-    width: 400px;
+    /* width: 400px; */
     height: 349px;
   }
 }
