@@ -862,7 +862,11 @@ h6 {
 }
 
 .story-section .story-body {
-  margin-top: calc(3vw);
+  /* margin-top: calc(3vw); */
+}
+
+.story-section .story-body .body-wrapper{
+  /* margin-top: calc(3vw); */
 }
 
 .story-section .story-body .body-wrapper p {
@@ -872,7 +876,7 @@ h6 {
 
 
 @media (min-width: 992px) {
-  .story-section .story-container {
+  /* .story-section .story-container {
     position: relative;
     display: inline-block;
   }
@@ -880,21 +884,21 @@ h6 {
   .story-section  .img-col {
     position: absolute;
     display: block;
-  }
+  } */
 }
 
 @media (max-width: 992px) {
-  .story-section .col-body {
+  /* .story-section .col-body {
     margin-left: 0;
-  }
+  } */
 
   .story-section .col-body p {
     line-height: 1.5;
   }
 
-  .story-section .story-body {
+  /* .story-section .story-body {
     margin-top: calc(1vw);
-  }
+  } */
 }
 
 
@@ -918,11 +922,15 @@ h6 {
   text-transform: uppercase;
   color: #867457;
   font-size: 24px;
+  font-size: calc( 14px + (24 - 14) * ((100vw - 264px) / (1600 - 300))  );
+
 }
 
 .wedding-info .info-body {
   margin-top: 3rem;
   font-size: 18px;
+  font-size: calc( 12px + (18 - 12) * ((100vw - 264px) / (1600 - 300))  );
+
 }
 
 
