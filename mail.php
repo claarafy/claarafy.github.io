@@ -4,11 +4,11 @@
 
 	$from  = "contact@messeinlove.com";
 
-	$sender_name = $_POST['name'];
-	$email  = $_POST['email']; // this is the sender's Email address
-	$number_of_guests = $_POST['guest'];
-	$events = $_POST['events'];
-	$notes = $_POST['message'];
+	$sender_name = $_POST['Name'];
+	$email  = $_POST['Email']; // this is the sender's Email address
+	$number_of_guests = $_POST['Guests'];
+	$events = $_POST['Attendance'];
+	$notes = $_POST['Message'];
 
 	$subject = "RSVP from : " . $sender_name;
 	$message =
