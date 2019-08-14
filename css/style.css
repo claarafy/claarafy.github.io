@@ -1134,6 +1134,7 @@ transition: all 0.3s ease;
 .footer-text .text-wrapper,
 .footer-col-img .img-wrapper {
   display: inline-block;
+  cursor: pointer;
 }
 
 .footer-col .footer-col-img img {

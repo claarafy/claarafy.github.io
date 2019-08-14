@@ -5,7 +5,7 @@
        When document is ready, do
        ========================================================================== */
         $(document).on('ready', function() {
-            scrollToToped();
+            registerScrollToTop();
             onePageNav();
             toggleClassForSmallNav();
             smallNavFunctionality();
@@ -169,7 +169,7 @@
     /*------------------------------------------
         = SCROLL TO TOP
     -------------------------------------------*/
-    function scrollToToped() {
+    function registerScrollToTop() {
         $(window).scroll(function(){
             if ($(this).scrollTop() > 600) {
                 $('.scrollToTop').fadeIn();
@@ -179,13 +179,14 @@
         });
 
         scrollToTop();
-        
-        $('.scrollToTop').click(scrollToTop);
 
-        function scrollToTop(){
-            $('html, body').animate({scrollTop : 0},1000);
-            return false;
-        }
+        $('.scrollToTop').click(scrollToTop);
+        $('.footer-link').click(scrollToTop);
+    }
+
+    function scrollToTop(){
+        $('html, body').animate({scrollTop : 0},1000);
+        return false;
     }
 
     /*------------------------------------------
