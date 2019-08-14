@@ -9,6 +9,7 @@
             onePageNav();
             toggleClassForSmallNav();
             smallNavFunctionality();
+
         });
 
     /* ==========================================================================
@@ -22,6 +23,7 @@
        ========================================================================== */
         $(window).on('load', function() {
             toggleMobileNavigation();
+
         });
 
     /* ==========================================================================
@@ -39,6 +41,9 @@
    /*------------------------------------------
         = FUNCTIONS
     -------------------------------------------*/
+
+
+
     // Parallax background
     function bgParallax() {
         if ($(".parallax").length) {
@@ -55,8 +60,6 @@
                     backgroundPosition: "50%" + positionValue,
                     backgroundSize: "cover"
                 });
-
-
 
                 if ( window.innerWidth < 768) {
                     $(this).css({
@@ -175,11 +178,14 @@
             }
         });
 
-        //Click event to scroll to top
-        $('.scrollToTop').click(function(){
-            $('html, body').animate({scrollTop : 0},800);
+        scrollToTop();
+        
+        $('.scrollToTop').click(scrollToTop);
+
+        function scrollToTop(){
+            $('html, body').animate({scrollTop : 0},1000);
             return false;
-        });
+        }
     }
 
     /*------------------------------------------
