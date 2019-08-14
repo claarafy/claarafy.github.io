@@ -221,29 +221,29 @@
        if ($("#rsvp-form").length) {
            $("#rsvp-form").validate({
                rules: {
-                   name: {
+                   Name: {
                        required: true,
                        minlength: 2
                    },
-                   email: {
+                   Email: {
                        required: true
                    },
 
-                   guest: {
+                   Guests: {
                        required: true
                    },
 
-                   events: {
+                   Attendance: {
                        required: true
                    }
 
                },
 
                messages: {
-                   name: "Please enter your name",
-                   email: "Please enter your email",
-                   guest: "Please select your number of guests",
-                   events: "Please let us know if you're attending"
+                   Name: "Please enter your name",
+                   Email: "Please enter your email",
+                   Guests: "Please select your number of guests",
+                   Attendance: "Please let us know if you're attending"
                },
 
                submitHandler: function (form) {
@@ -261,17 +261,18 @@
                    });
                    return false;
                }
-
-
            });
 
            function successHandler(form) {
+
              $( "#loader").hide();
              $( "#success").slideDown( "slow" );
              setTimeout(function() {
              $( "#success").slideUp( "slow" );
              }, 3000);
              alert("Your RSVP was successfully sent to Jesse and Megan. Thank you!")
+
+             postToGoogleSheet(form);
              form.reset();
            }
 
@@ -282,6 +283,23 @@
              $( "#error").slideUp( "slow" );
              }, 3000);
              alert("Sorry, there was an error. Please contact Jesse and Megan directly. ")
+           }
+
+           var url = "https://script.google.com/macros/s/AKfycbzSuNFhBbJDEXSRYF6h2J8yMgNR4MFBXts5we-2rXWcBAD--tIE/exec"
+
+           function postToGoogleSheet(form) {
+             $.ajax({
+               url : url,
+               method: 'GET',
+               dataType: 'json',
+               data: $(form).serialize(),
+               success : function() {
+                 console.log("succesful")
+               },
+               error : function() {
+                 console.log("failed")
+               }
+             });
            }
        }
 
